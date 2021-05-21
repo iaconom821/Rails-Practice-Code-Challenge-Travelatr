@@ -1,0 +1,8 @@
+<h1><%= @post.title %></h1>
+<h3><%= @post.content %></h3>
+
+<%= button_to "Like #{@post.likes}", like_path(@post.id), :method => "patch" %>
+
+<p><%= link_to Blogger.find(@post.blogger_id).name, blogger_path(@post.blogger_id)%></p>
+
+<p><%= link_to Destination.find(@post.destination_id).name, destination_path(@post.destination_id)%></p>

@@ -1,0 +1,11 @@
+<h1><%= @destination.name %></h1>
+
+<h4>Most Recent Posts</h4>
+<% @destination.recent_posts.each do |post| %>
+    <p><%= post.title %></p>
+
+<% end %>
+
+<p>Most Liked Post Title <%= link_to @destination.most_liked_post.title, post_path(@destination.most_liked_post) %></p>
+
+<p>Average Age of Bloggers <%= @destination.avg_blogger_age %></p>

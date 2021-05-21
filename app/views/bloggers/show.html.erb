@@ -1,0 +1,8 @@
+<h1><%= @blogger.name %></h1>
+
+<p><%= @blogger.total_likes %></p>
+
+<% if @blogger.most_liked_post %>
+    <p><%= link_to @blogger.most_liked_post_title, post_path(@most_liked_post) %></p>
+<% end %>
+
